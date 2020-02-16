@@ -1,0 +1,37 @@
+{
+  "name": "buntimer2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify src/app.tsx -p tsify > public/static/js/bundle.js",
+    "build-prod": "browserify src/app.tsx --full-paths -p tsify -g [ envify --NODE_ENV production ] -g uglifyify > public/static/js/bundle.js",
+    "watch": "onchange -v --initial 'src/*' -- npm run build",
+    "serve": "ecstatic -p 8003 --cache 'no-store' public",
+    "serve-with-cache": "ecstatic -p 8003 public",
+    "watch-and-serve": "npm run watch & npm run serve",
+    "clean": "rm -f public/static/js/bundle.js build/*",
+    "tsc": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/named-regexp-groups": "^1.0.0",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "browserify": "^16.5.0",
+    "ecstatic": "^4.1.2",
+    "envify": "^4.1.0",
+    "onchange": "^6.1.0",
+    "tsify": "^4.0.1",
+    "typescript": "^3.7.5",
+    "uglifyify": "^5.0.2"
+  },
+  "dependencies": {
+    "firebase": "^7.7.0",
+    "named-regexp-groups": "^1.0.5",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
