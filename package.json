@@ -21,7 +21,7 @@
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
     "browserify": "^16.5.0",
-    "ecstatic": "^4.1.2",
+    "ecstatic": "^4.1.4",
     "envify": "^4.1.0",
     "onchange": "^6.1.0",
     "tsify": "^4.0.1",
